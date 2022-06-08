@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="icon" href="./img/plane.png">
+    <script src="js/validação.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Meu site</title>
+</head>
+
+<body>
+    <img class="img_background" src="./img/cadastro.jpg" alt="">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navegacao">
+                <a href="index.html">Inicio</a>
+                <a href="historia.html">Historias</a>
+                <a class="ativo" href="cadastro.html">Cadastrar</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+        <section class="sectionOne" id="etapa0">
+            <div class="card">
+                <span>Cadastre-se <ion-icon name="person-add-outline" size="large"></ion-icon></span>
+
+                <label for="inputNome">Nome:</label>
+                <input id="inputNome" type="text" placeholder="Nome">
+
+                
+
+
+                <label for="inputEmail">Email:</label>
+                <div id="emailInvalido" style="font-size: 12px;"></div>
+                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="xxx.xxx@xxxx.com">
+
+                <label>
+                    Senha:
+                </label>
+                <div id="senhaInvalida" style="font-size: 12px;">
+                </div>
+                <input onblur="ValidarSenha()" id="inputSenha" type="password" placeholder="Senha">
+                <label for="inputSenha">
+                    Confirmar Senha:
+                </label>
+                <div id="ConfirmarSenhaInvalida" style="font-size: 12px;">
+                </div>
+                <input onblur="ValidarConfirmarSenha()" id="inputConfirmarSenha" type="password" placeholder="Confirmar Senha">
+
+                <button onclick="proximo()" id="inputButton" type="password" onclick="" placeholder="Confirmar Senha">
+                    <ion-icon name="send"></ion-icon>
+                    <span>Proximo</span>
+                </button>
+            </div>
+        </section>
+        <section class="sectionOne" id="etapa1" style="display: none;">
+            <div class="card">
+                <span>Cadastre-se <ion-icon name="person-add-outline" size="large"></ion-icon></span>
+                <label for="">Deseja Viajar em: </label>
+                <select class="Viagem" id="ComboBox">
+                    <option value="Casal">Casal</option>
+                    <option value="Familia">Familia</option>
+                    <option value="Amigos">Amigos</option>
+                </select>
+                <label for="">Qual Cidade Preferida Para Viajar: </label>
+                <input id="Cidade">
+                <label for="">Qual o mês da suas Ferias: </label>
+                <select class="Viagem" id="ComboBox2">
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro">Outubro</option>
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                </select>
+                <button onclick="cadastrar()" id="inputButton" type="password" placeholder="********"
+                    data-swal-toast-template="#my-template">
+                    <ion-icon name="send"></ion-icon>
+                    <span>Cadastrar</span>
+                </button>
+                <button onclick="VoltarInicio()" id="inputButton" type="password" placeholder="********"
+                    data-swal-toast-template="#my-template">
+                    <ion-icon name="send" class="Voltar"></ion-icon>
+                    <span>Voltar</span>
+                </button>
+            </div>
+        </section>
+        <footer>
+            &copy; Todos os direitos reservados!
+        </footer>
+    </div>
+</body>
+
+</html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/cadastro.js"></script>

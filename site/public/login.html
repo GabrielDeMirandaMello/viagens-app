@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="./img/plane.png">
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Meu site</title>
+    <script src="./js/login.js"></script>
+    <script src="./js/validação.js"></script>
+</head>
+
+<body>
+    <img class="img_background" src="./img/login.jpg" alt="">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navegacao">
+                <a href="index.html">Inicio</a>
+                <a href="historia.html">Historias</a>
+                <a href="cadastro.html">Cadastrar</a>
+                <a class="ativo" href="login.html">Login</a>
+            </div>
+        </nav>
+        <section class="sectionOne">
+            <div class="card">
+                <span>Login<img class="img" src="./img/user.png" alt=""></span>
+                <label for="inputEmail">Email:</label>
+                <div id="emailInvalido" style="font-size: 12px;"></div>
+                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="xxx.xxx@gmail.com">
+                <label for="inputSenha">Senha:</label>
+                <div id="senhaInvalida" style="font-size: 12px;"></div>
+                <input id="inputSenha" type="password" placeholder="********">
+                <button onclick="ValidarEmail(), entrar()">Entrar</button>
+            </div>
+        </section>
+        
+    </div>
+</body>
+
+</html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

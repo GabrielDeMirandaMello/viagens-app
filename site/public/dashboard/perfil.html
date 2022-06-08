@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="icon" href="../img/plane.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list" style="--clr: #848484;">
+                <a href="dashboard.html">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="text">Inicio</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list active" style="--clr: #0080FF;">
+                <a href="perfil.html">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="text">Perfil</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0fc70f;">
+                <a href="Tempo.html">
+                    <span class="icon"><ion-icon name="thunderstorm-outline"></ion-icon></span>
+                    <span class="text">Tempo</span>
+                </a>
+            </li>
+        </ul>
+        
+        <ul>
+            <li class="list" style="--clr: #f8fc02;">
+                <a href="historias.html">
+                    <span class="icon">
+                        <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                    <span class="text">Registrar Historia</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a href="historico.html">
+                    <span class="icon">
+                        <ion-icon name="library-outline"></ion-icon>
+        
+                    </span>
+                    <span class="text">Suas Historias</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a href="../login.html">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="container">
+        
+        <div class="card">
+            <div class="div_dados">
+                <div class="titulo">Informações do seu Perfil</div>
+                <span>Nome:</span>
+                <input disabled type="text" id="input_nome" placeholder="Gabriel de Miranda Mello">
+                <span>Email:</span>
+                <input disabled type="text" id="input_email" placeholder="Gabriel.mmello@sptech.school">
+                <span>Ferias:</span>
+                <input disabled type="text" id="input_ferias" placeholder="Junho">
+                <span>Tipo de Viagem Preferido:</span>
+                <input disabled type="text" id="input_tipo_viagem" placeholder="Junho">
+                <span>Local Preferido Para Viajar:</span>
+                <input disabled type="text" id="input_local_preferido" placeholder="Junho">
+            </div>
+            <div class="div_icon">
+                <ion-icon name="person" class="icon_perfil"></ion-icon>
+            </div>
+            
+        </div>
+    </section>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
+<script>
+    input_nome.value = sessionStorage.NOME_USUARIO
+    input_email.value = sessionStorage.EMAIL_USUARIO
+    input_ferias.value = sessionStorage.MES_FERIAS
+    input_tipo_viagem.value = sessionStorage.TIPO_VIAGEM
+    input_local_preferido.value = sessionStorage.DESTINO
+</script>

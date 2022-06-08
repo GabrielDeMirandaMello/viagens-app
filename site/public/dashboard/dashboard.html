@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" href="../img/plane.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/Aviso.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Dashboard</title>
+</head>
+
+<body onload="validarSessao(), listar(), listarHistoriasProprias(), grafico1(),grafico2(), DadosGrafico()">
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list active" style="--clr: #848484;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="bar-chart-outline"></ion-icon>
+                    </span>
+                    <span class="text">Inicio</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0080FF;">
+                <a href="perfil.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">Perfil</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0fc70f;">
+                <a href="Tempo.html">
+                    <span class="icon">
+                        <ion-icon name="thunderstorm-outline"></ion-icon>
+                    </span>
+                    <span class="text">Tempo</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="list" style="--clr: #f8fc02;">
+                <a href="historias.html">
+                    <span class="icon">
+                        <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                    <span class="text">Registrar Historia</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a href="historico.html">
+                    <span class="icon">
+                        <ion-icon name="library-outline"></ion-icon>
+                        
+                    </span>
+                    <span class="text">Suas Historias</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a onclick="limparSessao()">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="container">
+        <div class="top_analitcs">
+            <div class="card_bem_vindo" id="nomeUsuario"></div>
+            <div class="card_analitcs" id="qtd_viagens"></div>
+        </div>
+        <div class="card">
+            <div class="card um">
+                <h1>Este é o seu total de historias conosco:</h1>
+                <h1>&darr;</h1>
+                <canvas id="myChart" class="grafico"></canvas>
+            </div>
+            <div class="card dois">
+                <h1>Caso você viaje de carro podemos te ajudar:</h1>
+                <h1>&darr;</h1>
+                <div class="calculo_carro">
+                    <div class="div_km_total">
+                        <h4 class="titulo">Quantos KM tem a sua viagem de carro:</h4> <br>
+                        <input id="input_km_viagem" placeholder="0">
+                    </div> 
+                    <div class="div_km_litro">
+                        <h4 class="titulo">Quantos KM por litro o carro anda:</h4> <br>
+                        <input id="input_km_carro" placeholder="0">
+                    </div>
+                </div>
+                <div>
+                    Selecione o Combustivel:
+                    <select class="combustiveis" id="select_tipo_combustivel">
+                        <option value="1">Gasolina</option>
+                        <option value="2">Alcool</option>
+                        <option value="3">GNV</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="visual_botao" onclick="CalcularGasto()"><b>Calcular Gasto</b></button>
+                    <button class="visual_botao" onclick="limpar()"><b>Limpar Calculo</b></button><br>
+                </div>
+                <div>Você irá gastar R$<span id="gasto_total">0</span> só de Combustível !</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card um">
+                <h1>Este grafico é um comparativo das suas historias
+                    em relação as historias do nosso site:</h1>
+                <h1>&darr;</h1>
+                <div class="grafico_pizza">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/graficos.js"></script>
+</body>
+
+</html>
+   
+
+
+

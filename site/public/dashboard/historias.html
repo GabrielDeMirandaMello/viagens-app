@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dash_historia.css">
+    <link rel="icon" href="../img/plane.png">
+    <script src="../js/dash_historias.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Dashboard</title>
+</head>
+<body >
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list" style="--clr: #848484;">
+                <a href="dashboard.html">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="text">Inicio</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0080FF;">
+                <a href="perfil.html">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="text">Perfil</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0fc70f;">
+                <a href="Tempo.html">
+                    <span class="icon"><ion-icon name="thunderstorm-outline"></ion-icon></span>
+                    <span class="text">Tempo</span>
+                </a>
+            </li>
+        </ul>
+        
+        <ul>
+            <li class="list active" style="--clr: #f8fc02;">
+                <a href="historias.html">
+                    <span class="icon">
+                        <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                    <span class="text">Registrar Historia</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a href="historico.html">
+                    <span class="icon">
+                        <ion-icon name="library-outline"></ion-icon>
+        
+                    </span>
+                    <span class="text">Suas Historias</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a href="../login.html">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="container">
+        <div class="card">
+            <div class="div_titulo">
+                <span class="titulo">Conte-nos a sua Historia !</span>
+            </div>
+            <div class="div_dados">
+                <div class="form_esquerda">
+                    <label for="">Nome:</label>
+                    <input disabled id="input_nome" type="text">
+                    <label for="">Deixe aqui a URL da sua imagem:</label>
+                    <input id="input_imagem" type="url">
+                </div>
+                <div class="form_direita">
+                    <label for="">Deixe aqui seu Feedback da Viagem:</label>
+                    <textarea onkeyup="calcularCaracter()" name="message" id="historia_texto" class="texto_historia" cols="30" rows="10" maxlength="210"></textarea>
+                    <span><b id="caracter">0</b>/210</span>
+                </div>
+            </div>
+            <div class="div_enviar">
+                <button onclick="enviarHistoria()">Enviar Historia</button>
+            </div>
+        </div>
+    </section>
+</body >
+</html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/imagens.js"></script>
+<script>
+    input_nome.value = sessionStorage.NOME_USUARIO
+</script>

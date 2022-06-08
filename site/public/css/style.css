@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.img_background {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+}
+
+a {
+    text-decoration: none;
+    border: 2px solid #000;
+    background-image: linear-gradient(#222, #444, #222);
+    border-radius: 20px;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.ativo {
+    box-shadow: 5px 5px 5px #000;
+
+}
+
+a:hover {
+    transition: calc(0.2s);
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid;
+    color: #fff;
+    padding: 5px 30px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacao {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+
+/* Corpo do site */
+.sectionOne {
+    width: 100%;
+    height: 80%;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.sectionOne div {
+    margin-left: 10%;
+    margin-bottom: 5px;
+}
+.card {
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 15px 25px 25px 25px;
+    height: 8%;
+    overflow: hidden;
+}
+.card:hover {
+    transition: calc(0.4s);
+    padding: 30px;
+    height: 50%;
+}
+.card2 {
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 15px 25px 25px 25px;
+    height: 8%;
+    overflow: hidden;
+}
+
+.card2:hover {
+    transition: calc(0.4s);
+    padding: 30px;
+    height: 30%;
+}
+
+h2 {
+    width: 240px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}

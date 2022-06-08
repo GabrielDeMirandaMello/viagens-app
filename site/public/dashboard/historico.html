@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/historico.css">
+    <link rel="icon" href="../img/plane.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/Aviso.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Dashboard</title>
+</head>
+
+<body onload="listarHistoriasProprias()">
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list " style="--clr: #848484;">
+                <a href="dashboard.html">
+                    <span class="icon">
+                        <ion-icon name="bar-chart-outline"></ion-icon>
+                    </span>
+                    <span class="text">Inicio</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0080FF;">
+                <a href="perfil.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">Perfil</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #0fc70f;">
+                <a href="Tempo.html">
+                    <span class="icon">
+                        <ion-icon name="thunderstorm-outline"></ion-icon>
+                    </span>
+                    <span class="text">Tempo</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="list" style="--clr: #f8fc02;">
+                <a href="historias.html">
+                    <span class="icon">
+                        <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                    <span class="text">Registrar Historia</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list active" style="--clr: #f44336;">
+                <a href="historico.html">
+                    <span class="icon">
+                        <ion-icon name="library-outline"></ion-icon>
+        
+                    </span>
+                    <span class="text">Suas Historias</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
+                <a href="../login.html">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+        <section class="sectionOne" id="inserir_card">
+            
+        </section>
+</body>
+</html>
+<script src="../js/dashboard.js"></script>
